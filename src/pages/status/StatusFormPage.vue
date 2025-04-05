@@ -37,7 +37,7 @@ const submitForm = async () => {
 
   toastStore.setToast({
     type: 'success',
-    text: `Status ${pageMode == PageMode.PAGE_INSERT ? 'criada' : 'alterada'} com sucesso!`
+    text: `Status ${pageMode == PageMode.PAGE_INSERT ? 'criado' : 'alterado'} com sucesso!`
   })
 
   router.push({ name: 'status-list' })

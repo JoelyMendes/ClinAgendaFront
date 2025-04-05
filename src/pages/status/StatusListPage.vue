@@ -69,7 +69,7 @@ const deleteListItem = async (item: IStatus) => {
 
   toastStore.setToast({
     type: 'success',
-    text: 'Status deletada com sucesso!'
+    text: 'Status deletado com sucesso!'
   })
 
   loadDataTable()

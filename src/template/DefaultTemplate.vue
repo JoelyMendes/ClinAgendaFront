@@ -20,6 +20,11 @@ const menus = ref([
     title: 'Especialidades',
     icon: mdiShapeOutline,
     to: { name: 'specialty-list' }
+  },
+  {
+    title: 'Pacientes',
+    icon: mdiShapeOutline,
+    to: { name: 'patient-list' }
   }
 ])
 
