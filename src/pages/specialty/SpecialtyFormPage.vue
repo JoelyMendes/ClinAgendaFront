@@ -49,6 +49,7 @@ const loadForm = async () => {
   if (pageMode === PageMode.PAGE_INSERT) return
 
   isLoadingForm.value = true
+
   const specialtyFormResponse = await request<undefined, SpecialtyForm>({
     method: 'GET',
     endpoint: `specialty/update/${id}`
@@ -66,7 +67,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <default-template>
+  <DefaultTemplate>
     <template #title>
       {{ pageTitle }}
     </template>
@@ -83,7 +84,10 @@ onMounted(() => {
         <v-col cols="6">
           <v-text-field v-model.trim="form.name" label="Nome" hide-details />
         </v-col>
+        <v-col cols="2">
+          <v-text-field v-model.trim="form.scheduleDuration" label="Duração" hide-details />
+        </v-col>
       </v-row>
     </v-form>
-  </default-template>
+  </DefaultTemplate>
 </template>
